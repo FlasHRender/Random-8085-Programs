@@ -1,0 +1,13 @@
+# BEGIN 0000H
+	   LXI H,8000
+	   MOV B,M
+	   INX H
+	   MOV C,M
+
+MUL:	   ADD B
+	   DCR C
+	   JNZ MUL
+	   STA 8500
+	   HLT
+# ORG 8000
+# DB 04H,04H,FFH,FFH

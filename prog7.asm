@@ -1,0 +1,13 @@
+
+# BEGIN 0000H
+	   LHLD 8000
+	   XCHG
+	   LHLD 8002
+	   SHLD 8000
+	   XCHG
+	   SHLD 8002
+	   HLT
+
+
+# ORG 8000
+# DB 01H,01H,FFH,FFH

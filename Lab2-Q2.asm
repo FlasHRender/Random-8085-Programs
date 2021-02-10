@@ -1,0 +1,11 @@
+# ORG8000
+	   MVI A,20
+	   STA 8200
+	   LDA 8200
+	   MOV B,A
+	   MVI A,30
+	   STA 8201
+	   LDA 8201
+	   ADD B
+	   STA 8500
+	   HLT

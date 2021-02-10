@@ -1,0 +1,14 @@
+	   MVI B,0A
+	   LXI H,8200
+	   MOV A,M
+
+LOOP:	   DCR B
+	   JZ BASE
+	   INX H
+	   ADD M
+	   JMP LOOP
+
+BASE:	   STA 8500
+	   RST 3
+# ORG 8200
+# DB 01, 01,01,01,01,01,01,01,01,01

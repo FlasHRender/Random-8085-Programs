@@ -1,0 +1,15 @@
+# BEGIN 0000H
+	   LHLD 8200
+	   XCHG
+	   LHLD 8202
+	   MVI C,00
+	   DAD D
+	   JNC AHEAD
+	   INR C
+
+AHEAD:	   SHLD 8204
+	   MOV A,C
+	   STA 8206
+	   RST 3
+# ORG 8200
+# DB FF,FF,FF,FF
